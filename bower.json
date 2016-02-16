@@ -1,0 +1,21 @@
+{
+  "name": "angular",
+  "homepage": "https://github.com/vaidyshan/angular",
+  "authors": [
+    "vaidy shanmugam <vshanmugam@housecanary.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.0"
+  }
+}
