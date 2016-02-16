@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-    <title>Simple Web App</title>
+    <title>App Web</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
 </head>
 <body>
 <div ng-controller="myController">
-    <input type="text" placeholder="Your Name" ng-model="name">
 
-    <h1>Hello {{ name }}</h1>
+    <h1>{{clock}}</h1>
 </div>
-<script type="text/javascript">
+
+<script>
     angular.module('myApp', [])
-            .controller('myController', function($scope){
+            .controller('myController', function ($scope, $timeout) {
+                var updateClock = function () {
+                    $scope.clock = new Date();
+                    $timeout(function () {
+                        updateClock()
+                    }, 1000);
+                };
+                updateClock();
             });
 </script>
 </body>
